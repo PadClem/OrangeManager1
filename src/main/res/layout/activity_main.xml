@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    //Header
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="55dp"
+       android:text="Orange Leaf"
+       android:textAllCaps="true"
+       android:fontFamily="sans-serif-black"
+       android:textSize="20dp"
+       android:textColor="#FFFFFF"
+       android:background="#FF8C00"
+       android:gravity="center"
+       />
+
+    //Branch Section
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E6FF8C00">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:background="@drawable/round_back_white10_100"
+            >
+
+            <TextView
+                android:id="@+id/SantaRosa"
+                android:background="@drawable/round_back_white100"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="Santa Rosa"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#FF8C00" />
+
+            <TextView
+                android:id="@+id/Manila"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="Manila"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/Batangas"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="Batangas"
+                android:gravity="center"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/fragment_base"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_nav"
+            tools:ignore="UnknownId" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_nav"
+            android:layout_alignParentBottom="true"
+            android:background="#FF8C00"
+            app:itemIconTint="#FFFFFF"
+            app:itemTextColor="#FFFFFF"
+            />
+    </RelativeLayout>
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_base"/>
+
+
+</LinearLayout>
